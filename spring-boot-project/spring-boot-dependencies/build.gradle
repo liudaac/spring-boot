@@ -83,7 +83,7 @@ bom {
 			]
 		}
 	}
-	library("AspectJ", "1.9.20.1") {
+	library("AspectJ", "1.9.21") {
 		group("org.aspectj") {
 			modules = [
 				"aspectjrt",
@@ -247,7 +247,7 @@ bom {
 			]
 		}
 	}
-	library("Dropwizard Metrics", "4.2.22") {
+	library("Dropwizard Metrics", "4.2.23") {
 		group("io.dropwizard.metrics") {
 			imports = [
 				"metrics-bom"
@@ -339,7 +339,7 @@ bom {
 			]
 		}
 	}
-	library("Groovy", "4.0.15") {
+	library("Groovy", "4.0.16") {
 		group("org.apache.groovy") {
 			imports = [
 				"groovy-bom"
@@ -438,7 +438,7 @@ bom {
 			]
 		}
 	}
-	library("HttpClient5", "5.2.1") {
+	library("HttpClient5", "5.2.3") {
 		group("org.apache.httpcomponents.client5") {
 			modules = [
 				"httpclient5",
@@ -456,7 +456,7 @@ bom {
 			]
 		}
 	}
-	library("HttpCore5", "5.2.3") {
+	library("HttpCore5", "5.2.4") {
 		group("org.apache.httpcomponents.core5") {
 			modules = [
 				"httpcore5",
@@ -606,7 +606,7 @@ bom {
 			]
 		}
 	}
-	library("Janino", "3.1.10") {
+	library("Janino", "3.1.11") {
 		group("org.codehaus.janino") {
 			modules = [
 				"commons-compiler",
@@ -636,7 +636,7 @@ bom {
 			]
 		}
 	}
-	library("Jaybird", "5.0.2.java11") {
+	library("Jaybird", "5.0.3.java11") {
 		group("org.firebirdsql.jdbc") {
 			modules = [
 				"jaybird"
@@ -664,7 +664,7 @@ bom {
 			]
 		}
 	}
-	library("Jersey", "3.1.3") {
+	library("Jersey", "3.1.5") {
 		group("org.glassfish.jersey") {
 			imports = [
 				"jersey-bom"
@@ -678,7 +678,7 @@ bom {
 			]
 		}
 	}
-	library("Jetty", "12.0.3") {
+	library("Jetty", "12.0.4") {
 		group("org.eclipse.jetty.ee10") {
 			imports = [
 				"jetty-ee10-bom"
@@ -753,7 +753,7 @@ bom {
 			]
 		}
 	}
-	library("Kafka", "3.6.0") {
+	library("Kafka", "3.6.1") {
 		group("org.apache.kafka") {
 			modules = [
 				"connect",
@@ -814,7 +814,7 @@ bom {
 			]
 		}
 	}
-	library("Kotlin Serialization", "1.6.1") {
+	library("Kotlin Serialization", "1.6.2") {
 		group("org.jetbrains.kotlinx") {
 			imports = [
 				"kotlinx-serialization-bom"
@@ -846,7 +846,7 @@ bom {
 			]
 		}
 	}
-	library("Logback", "1.4.11") {
+	library("Logback", "1.4.14") {
 		group("ch.qos.logback") {
 			modules = [
 				"logback-access",
@@ -953,7 +953,7 @@ bom {
 			]
 		}
 	}
-	library("Maven Javadoc Plugin", "3.6.2") {
+	library("Maven Javadoc Plugin", "3.6.3") {
 		group("org.apache.maven.plugins") {
 			plugins = [
 				"maven-javadoc-plugin"
@@ -995,7 +995,7 @@ bom {
 			]
 		}
 	}
-	library("Micrometer", "1.12.1-SNAPSHOT") {
+	library("Micrometer", "1.12.1") {
 		considerSnapshots()
 		group("io.micrometer") {
 			modules = [
@@ -1008,7 +1008,7 @@ bom {
 			]
 		}
 	}
-	library("Micrometer Tracing", "1.2.1-SNAPSHOT") {
+	library("Micrometer Tracing", "1.2.1") {
 		considerSnapshots()
 		calendarName = "Tracing"
 		group("io.micrometer") {
@@ -1077,7 +1077,11 @@ bom {
 			]
 		}
 	}
-	library("Netty", "4.1.101.Final") {
+	library("Netty", "4.1.102.Final") {
+		prohibit {
+			versionRange "[4.1.103.Final]"
+			because "it crashes on macOS (https://github.com/netty/netty/issues/13728)"
+		}
 		group("io.netty") {
 			imports = [
 				"netty-bom"
@@ -1278,7 +1282,7 @@ bom {
 			]
 		}
 	}
-	library("R2DBC Postgresql", "1.0.2.RELEASE") {
+	library("R2DBC Postgresql", "1.0.3.RELEASE") {
 		considerSnapshots()
 		group("org.postgresql") {
 			modules = [
@@ -1286,7 +1290,7 @@ bom {
 			]
 		}
 	}
-	library("R2DBC Proxy", "1.1.2.RELEASE") {
+	library("R2DBC Proxy", "1.1.3.RELEASE") {
 		considerSnapshots()
 		group("io.r2dbc") {
 			modules = [
@@ -1323,7 +1327,7 @@ bom {
 			]
 		}
 	}
-	library("Reactor Bom", "2023.0.1-SNAPSHOT") {
+	library("Reactor Bom", "2023.0.1") {
 		considerSnapshots()
 		calendarName = "Reactor"
 		group("io.projectreactor") {
@@ -1692,7 +1696,7 @@ bom {
 			]
 		}
 	}
-	library("UnboundID LDAPSDK", "6.0.10") {
+	library("UnboundID LDAPSDK", "6.0.11") {
 		group("com.unboundid") {
 			modules = [
 				"unboundid-ldapsdk"
